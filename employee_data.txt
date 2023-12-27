@@ -1,0 +1,10 @@
+1,J,j,70000.00
+2,RAM,Manager,90000.00
+2,RAM,Manager,90000.00
+2,RAM,Manager,90000.00
+2,RAM,Manager,90000.00
+2,RAM,Manager,90000.00
+2,RAM,Manager,90000.00
+2,RAM,Manager,90000.00
+2,RAM,Manager,90000.00
+
