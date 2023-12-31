@@ -32,7 +32,7 @@ void saveEmployeesToFile() {
     fclose(file);
 }
 
-// Function to load employees from a file
+// Function to load employees from a filej
 void loadEmployeesFromFile() {
     FILE *file = fopen("employee_data.txt", "r");
     if (file == NULL) {
@@ -41,7 +41,7 @@ void loadEmployeesFromFile() {
     }
 
     numEmployees = 0;
-    while (fscanf(file, "%d,%[^,],%[^,],%f\n", &employees[numEmployees].id, employees[numEmployees].name,
+    while (fscanf(file, "%d,%99[^,],%99[^,],%f\n", &employees[numEmployees].id, employees[numEmployees].name,
                   employees[numEmployees].designation, &employees[numEmployees].salary) == 4) {
         numEmployees++;
     }
@@ -191,8 +191,10 @@ int main() {
                 break;
             default:
                 printf("Invalid choice. Please try again.\n");
-                break;
         }
+
+        // Clear the input buffer
+        while (getchar() != '\n');
     } while (choice != 5);
 
     return 0;
