@@ -1,23 +1,15 @@
 #include <stdio.h>
-#include <conio.h>
+#include <math.h>
+
+double computePolynomial(double x) {
+return 3 * pow(x, 5) + 2 * pow(x, 4) - 5 * pow(x, 3) - pow(x, 2) + 7 * x - 6;
+}
 
 int main() {
-    // Declare variables to store the numbers
-    int num1, num2;
+double x;
+printf("Enter a value for x: ");
+scanf("%lf", &x);
+printf("Result of polynomial: %.2f\n", computePolynomial(x));
 
-    // Prompt the user to enter the first number
-    printf("Enter the first number: ");
-    scanf("%d", &num1);
-
-    // Prompt the user to enter the second number
-    printf("Enter the second number: ");
-    scanf("%d", &num2);
-
-    // Add the two numbers and store the result in a variable
-    int sum = num1 + num2;
-
-    // Display the result
-    printf("The sum of %d and %d is: %d\n", num1, num2, sum);
-
-    return 0;
+return 0;
 }
